@@ -1,30 +1,47 @@
 .main-grid{
-    display: grid;
-    grid-template-rows: 5% 10% 1fr 1fr 1fr;
-    grid-template-areas:
-      "header"
-      "navigation"
-      "hero"
-      "content"
-      "image-section";
-  }
-  
-  #header{
-    grid-area: header;
-  
-  }
-  
-  #navigation{
-    grid-area: navigation;
-  }
-  
-  #content{
-    grid-area: content;
-    display: grid;
-  }
-  
-  #image-section{
-    grid-area: image-section;
-  }
-  
-  
+  display: grid;
+  grid-template-rows: 5% 10% 1fr 1fr 1fr;
+  grid-template-columns: 10% 1fr 10%;
+  grid-template-areas:
+    "header header header"
+    "navigation navigation nagivation"
+    "hero hero hero"
+    ". content ."
+    "image-section image-section image-section";
+}
+
+#header{
+  grid-area: header;
+ background-color: pink;
+ height: 5%;
+ width: 100%;
+}
+
+#navigation{
+  grid-area: navigation;
+  background-color: orange;
+  height: 10%;
+  width: 100%;
+}
+
+#hero{
+    grid-area: hero;
+    background-color: gray;
+    height: 45%;
+    width: 100%;
+}
+
+#content{
+  grid-area: content;
+  background-color: blue;
+  height: 75%;
+  width: 100%;
+}
+
+#image-section{
+  grid-area: image-section;
+  background-color: magenta;
+  height: 45%;
+  width: 100%;
+}
+
