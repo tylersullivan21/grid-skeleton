@@ -13,7 +13,7 @@
 #header{
   grid-area: header;
  background-color: pink;
- height: 100%;
+ height: 5%;
  width: 100%;
 }
 
@@ -34,7 +34,17 @@
 #content{
   grid-area: content;
   background-color: blue;
-  height: 75%;
+  height: 120em;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+  grid-template-areas:
+  ". meat-content .";
+}
+.meat-content{
+  background-color: black;
+  grid-area: meat-content;
   width: 100%;
 }
 
