@@ -1,20 +1,33 @@
 .main-grid{
   display: grid;
-  grid-template-rows: 5% 10% 1fr 1fr 1fr;
+  grid-template-rows: 5% 10% 1fr 1fr 1fr 1fr;
   grid-template-columns: 10% 1fr 10%;
   grid-template-areas:
     "header header header"
     "navigation navigation nagivation"
     "hero hero hero"
     ". content ."
-    "image-section image-section image-section";
+    "image-section image-section image-section"
+    ". content2 .";
 }
 
 #header{
   grid-area: header;
  background-color: pink;
- height: 5%;
+ height: 8%;
  width: 100%;
+ display: grid;
+ grid-template-columns: 25% 1fr 25%;
+ grid-template-areas:
+ ". logo .";
+}
+.logo{
+  grid-area: logo;
+  width: 60%;
+  height: 70%;
+  background-color:midnightblue;
+  justify-self: center;
+  align-self: center;
 }
 
 #navigation{
@@ -38,7 +51,7 @@
   width: 100%;
 
   display: grid;
-  grid-template-columns: 10% 1fr 10%;
+  grid-template-columns: 15% 1fr 15%;
   grid-template-areas:
   ". meat-content .";
 }
@@ -47,6 +60,24 @@
   grid-area: meat-content;
   width: 100%;
 }
+
+#content2{
+  grid-area: content;
+  background-color: purple;
+  height: 120em;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 15% 1fr 15%;
+  grid-template-areas:
+  ". meat-content2 .";
+}
+.meat-content2{
+  background-color: mediumspringgreen;
+  grid-area: meat-content2;
+  width: 100%;
+}
+
 
 #image-section{
   grid-area: image-section;
