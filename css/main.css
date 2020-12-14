@@ -1,0 +1,30 @@
+.main-grid{
+    display: grid;
+    grid-template-rows: 5% 10% 1fr 1fr 1fr;
+    grid-template-areas:
+      "header"
+      "navigation"
+      "hero"
+      "content"
+      "image-section";
+  }
+  
+  #header{
+    grid-area: header;
+  
+  }
+  
+  #navigation{
+    grid-area: navigation;
+  }
+  
+  #content{
+    grid-area: content;
+    display: grid;
+  }
+  
+  #image-section{
+    grid-area: image-section;
+  }
+  
+  
