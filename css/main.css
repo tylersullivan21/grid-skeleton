@@ -1,6 +1,13 @@
+body{
+  margin:0;
+  padding: 0;
+}
+/****************************/
+/*****MAIN CSS GRID STYLES***/
+/****************************/
 .main-grid{
   display: grid;
-  grid-template-rows: 5% 10% 1fr 1fr 1fr 1fr;
+  grid-template-rows: 5% 10% 1fr 1fr 1fr 1fr 10%;
   grid-template-columns: 10% 1fr 10%;
   grid-template-areas:
     "header header header"
@@ -8,8 +15,12 @@
     "hero hero hero"
     ". content ."
     "commish-section commish-section commish-section"
-    ". content2 .";
+    ". content2 ."
+    "footer footer footer";
 }
+/****************************/
+/*****HEADER GRID STYLES***/
+/****************************/
 
 #header{
   grid-area: header;
@@ -21,6 +32,9 @@
  grid-template-areas:
  ". logo .";
 }
+/****************************/
+/*****LOGO GRID STYLES***/
+/****************************/
 .logo{
   grid-area: logo;
   width: 60%;
@@ -29,56 +43,49 @@
   justify-self: center;
   align-self: center;
 }
-
+/****************************/
+/*****NAVIGATION STYLES***/
+/****************************/
 #navigation{
   grid-area: navigation;
   background-color: orange;
   height: 10%;
   width: 100%;
 }
-
+/****************************/
+/*****HERO STYLES***/
+/****************************/
 #hero{
     grid-area: hero;
-    background-color: gray;
-    height: 45%;
     width: 100%;
 }
+.hero-image{
+  width:100%;
+}
 
+/****************************/
+/*****MAIN-CONTENT STYLES***/
+/****************************/
 #content{
   grid-area: content;
-  background-color: blue;
+  background-color: cyan;
   height: 120em;
   width: 100%;
-
   display: grid;
   grid-template-columns: 15% 1fr 15%;
   grid-template-areas:
   ". meat-content .";
 }
 .meat-content{
-  background-color: black;
+ background-color: white;
   grid-area: meat-content;
   width: 100%;
 }
 
-#content2{
-  grid-area: content;
-  background-color: purple;
-  height: 120em;
-  width: 100%;
 
-  display: grid;
-  grid-template-columns: 15% 1fr 15%;
-  grid-template-areas:
-  ". meat-content2 .";
-}
-.meat-content2{
-  background-color: mediumspringgreen;
-  grid-area: meat-content2;
-  width: 100%;
-}
-
-
+/****************************/
+/*COMMISIONER SECTION STYLES*/
+/****************************/
 #commish-section{
   grid-area: commish-section;
   background-color: magenta;
@@ -91,8 +98,6 @@ grid-template-areas:
 ". commish-pic ."
 ;    
 }
-
-
 .commish-header{
   grid-area: commish-header;
 }
@@ -103,8 +108,43 @@ grid-template-areas:
   padding: 5% 0;
 }
 
+/****************************/
+/*****CONTENT 2 STYLES***/
+/****************************/
+#content2{
+  grid-area: content;
+  height: 120em;
+  width: 100%;
+  background-color: mediumturquoise;
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+  grid-template-areas:
+  ". meat-content2 .";
+}
+.meat-content2{
+  grid-area: meat-content2;
+  width: 100%;
+  background-color: white;
+  
+}
 
-
+/****************************/
+/*****FOOTER STYLES***/
+/****************************/
+#footer{
+  grid-area: footer;
+  height:10%;
+  background-color: orange;
+  display: grid;
+  grid-template-areas:
+  ". footer-text .";
+}
+.footer-text{
+  grid-area:footer-text;
+  justify-self: center;
+  align-self: center;
+  font-size: 16px;
+}
 
 /*******************************************/
         /*MOBILE MEDIA QUERY HERE*/
