@@ -7,7 +7,7 @@
     "navigation navigation nagivation"
     "hero hero hero"
     ". content ."
-    "image-section image-section image-section"
+    "commish-pic commish-pic commish-pic"
     ". content2 .";
 }
 
@@ -79,11 +79,23 @@
 }
 
 
-#image-section{
-  grid-area: image-section;
+#commish-pic{
+  grid-area: commish-pic;
   background-color: magenta;
   height: 45%;
   width: 100%;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+grid-template-areas: 
+"left right";    
+}
+
+.left{
+  grid-area: left;
+}
+
+.right{
+  grid-area: right;
 }
 
 
