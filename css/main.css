@@ -85,17 +85,26 @@
   height: 45%;
   width: 100%;
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr ;
 grid-template-areas: 
-"left right";    
+"commish";    
 }
 
-.left{
-  grid-area: left;
+.commish{
+grid-area:commish;
+display: grid;
+grid-template-columns: 10% 1fr 10%;
+grid-template-areas:
+". header ."
+". img .";
+background-color: cyan;
+height: 45%;
+width: 100%;
 }
 
-.right{
-  grid-area: right;
+.header{
+  grid-area: header;
+  justify-self: left;
 }
 
 
