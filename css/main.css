@@ -5,33 +5,33 @@ body{
 /****************************/
 /*****MAIN CSS GRID STYLES***/
 /****************************/
-.main-grid{
+#main-grid{
   display: grid;
-  grid-template-rows: 5% 10% 1fr 1fr 1fr 1fr 10%;
-  grid-template-columns: 10% 1fr 10%;
-  grid-template-areas:
-    "header header header"
-    "navigation navigation nagivation"
-    "hero hero hero"
-    ". content ."
-    "commish-section commish-section commish-section"
-    ". content2 ."
-    "footer footer footer";
+ grid-template-columns:1fr 1fr 1fr;
+ grid-template-rows: 3% 5% auto 1100px 1fr 5%;
+ grid-template-areas: 
+ "header header header"
+ "navigation navigation navigation"
+ "hero hero hero"
+ "content content content"
+ "commish-section commish-section commish-section"
+ "footer footer footer";
 }
+
 /****************************/
 /*****HEADER GRID STYLES***/
 /****************************/
 
 #header{
   grid-area: header;
- background-color: pink;
- height: 8%;
- width: 100%;
- display: grid;
+  height: 100%;
+  background-color:pink;
+  display: grid;
  grid-template-columns: 25% 1fr 25%;
  grid-template-areas:
  ". logo .";
 }
+
 /****************************/
 /*****LOGO GRID STYLES***/
 /****************************/
@@ -48,126 +48,118 @@ body{
 /****************************/
 #navigation{
   grid-area: navigation;
-  background-color: orange;
-  height: 10%;
-  width: 100%;
+  height: 100%;
+  background-color:cyan;
 }
 /****************************/
 /*****HERO STYLES***/
 /****************************/
 #hero{
-    grid-area: hero;
-    width: 100%;
+  grid-area:hero;
+  height: 100%;
+  background-color:orange;
 }
 .hero-image{
   width:100%;
 }
-
 /****************************/
 /*****MAIN-CONTENT STYLES***/
 /****************************/
 #content{
   grid-area: content;
-  background-color: cyan;
-  height: 120em;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 15% 1fr 15%;
-  grid-template-areas:
-  ". meat-content .";
-}
-.meat-content{
- background-color: white;
-  grid-area: meat-content;
-  width: 100%;
+  height: 100%;
+  background-color:red;
+  display:grid;
+  grid-template-columns: 10% 1fr 10%;
+  grid-template-areas: 
+  ". meat ."
 }
 
+.meat{
+  grid-area: meat;
+  height:100%;
+  background-color:blue;
+}
 
 /****************************/
 /*COMMISIONER SECTION STYLES*/
 /****************************/
 #commish-section{
   grid-area: commish-section;
-  background-color: magenta;
-  height: 1fr;
-  width: 100%;
-  display:grid;
- grid-template-columns: 15% 1fr 15%;
-grid-template-areas: 
-". commish-header ."
-". commish-pic ."
-;    
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+  padding: 3% 0;
+  grid-template-areas: 
+  ". commish-header ."
+  ". commish-pic ."
 }
 .commish-header{
   grid-area: commish-header;
-}
-.commish-pic{
-  grid-area: commish-pic;
-  max-width:1100px;
-  justify-self: center;
-  padding: 5% 0;
+  padding-bottom:2%;
 }
 
+.commish-pic{
+  grid-area: commish-pic;
+  width:100%;
+  text-align: center;
+  margin: 0;
+}
+.commish-pic img{
+  width: 100%;
+}
+figcaption{
+  padding: 0 22%;
+  margin-top: 2%;
+  line-height: 1.8em;
+}
 /****************************/
 /*****CONTENT 2 STYLES***/
 /****************************/
-#content2{
-  grid-area: content;
-  height: 120em;
-  width: 100%;
-  background-color: mediumturquoise;
-  display: grid;
-  grid-template-columns: 10% 1fr 10%;
-  grid-template-areas:
-  ". meat-content2 .";
-}
-.meat-content2{
-  grid-area: meat-content2;
-  width: 100%;
-  background-color: white;
-  
-}
+
 
 /****************************/
 /*****FOOTER STYLES***/
 /****************************/
 #footer{
   grid-area: footer;
-  height:10%;
-  background-color: orange;
+  height: 100%;
+  background-color: mediumseagreen;
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
-  ". footer-text .";
+  ". footer-text ."
 }
+
 .footer-text{
   grid-area:footer-text;
+  text-align: center;
   justify-self: center;
-  align-self: center;
-  font-size: 16px;
+  align-self:center;
 }
 
 /*******************************************/
         /*MOBILE MEDIA QUERY HERE*/
 /*******************************************/
-@media only screen and (min-width: 480px) and (max-width:670px)   {
-  .main-grid{
-    display: grid;
-    grid-template-rows: 5% 10% 1fr 1fr 1fr 1fr 10%;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "header "
-      "navigation "
-      "hero "
-      " content "
-      " commish-section"
-      " content2 "
-      "footer";
-  }
-  #content{
-    grid-template-columns: 1fr;
-  }
-  #content2{
-    grid-template-columns: 1fr;
-  }
-}
 
+
+@media only screen and (max-width: 600px) {
+  #content{
+    grid-area: content;
+    height: 100%;
+    background-color:red;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    " meat "
+  }
+  #commish-section{
+    grid-area: commish-section;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 2% 0;
+    grid-template-areas: 
+    " commish-header "
+    " commish-pic "
+  }
+
+ }
