@@ -100,8 +100,8 @@ body{
 
 .commish-pic{
   grid-area: commish-pic;
-  width:100%;
-  text-align: center;
+  max-width: 950px;
+  justify-self: center;
   margin: 0;
 }
 .commish-pic img{
@@ -161,5 +161,7 @@ figcaption{
     " commish-header "
     " commish-pic "
   }
-
+  .commish-header{
+  text-align: center;
+  }
  }
